@@ -4,7 +4,7 @@ KUBERNETES 1.26,
 CONTAINERD 1.6.16,
 UBUNTU 22.04
 
-## On Master and Worker Nodes: 
+## ON MASTER & WORKER NODES: 
 ```
 sudo -s
 ```
@@ -91,7 +91,7 @@ Check swap config, ensure swap is 0
 free -m
 ```
 
-## ONLY ON CONTROL NODE
+## ONLY ON MASTER NODE
 Initialize a Kubernetes control plane
 ```
 kubeadm init --pod-network-cidr 10.10.0.0/16 --kubernetes-version 1.26.1 --node-name k8s-control
@@ -112,12 +112,12 @@ Get worker node commands to run to join additional nodes into cluster
 kubeadm token create --print-join-command
 ```
 
-## ONLY ON WORKER nodes
+## ONLY ON WORKER NODES
 ```
 Run the command from the token create output above on all the worker nodes
 ```
 
-To Verify, Run this command on master node
+## To Verify, Run this command on master node
 ```
 kubectl get nodes
 ```
