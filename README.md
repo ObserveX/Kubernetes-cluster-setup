@@ -96,7 +96,7 @@ Initialize a Kubernetes control plane
 ```
 kubeadm init --pod-network-cidr 10.10.0.0/16 --kubernetes-version 1.26.1 --node-name k8s-control
 ```
-Add Calico 3.25 CNI 
+Deploy Calico can be used to manage network connectivity and security for Kubernetes pods
 ```
 *** https://docs.tigera.io/calico/3.25/getting-started/kubernetes/quickstart
 kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/tigera-operator.yaml
