@@ -10,7 +10,7 @@ sudo -s
 ```
 Appends Master and Worker Nodes IP addresses and corresponding hostnames to the /etc/hosts file
 ```
-printf "\n192.168.2.93 kubecontrol\n192.168.2.94 kubeworker\n\n" >> /etc/hosts
+printf "\n192.168.2.93 k8s-control\n192.168.2.94 kubeworker\n\n" >> /etc/hosts
 ```
 Appends two kernel modules to be loaded at boot time
 ```
